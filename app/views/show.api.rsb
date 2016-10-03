@@ -1,0 +1,7 @@
+api.activity_logs do
+  api.id @activity_log.id
+  api.issue(:id => @activity_log.issue_id) unless @activity_log.issue.nil?
+  api.user(:id => @activity_log.user_id, :name => @activity_log.user.name) unless @activity_log.user.nil?
+  api.created_on @activity_log.created_on
+  api.updated_on @activity_log.updated_on
+end

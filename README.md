@@ -1,1 +1,1 @@
-# redmine_time_assistant
+# Redmine Time Assistant plugin

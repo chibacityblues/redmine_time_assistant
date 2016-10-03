@@ -1,0 +1,9 @@
+api.activity_logs do
+  @activity_logs.each do |al|
+	  api.id al.id
+	  api.issue(:id => al.issue_id) unless al.issue.nil?
+	  api.user(:id => al.user_id, :name => al.user.name) unless al.user.nil?
+	  api.created_on al.created_on
+	  api.updated_on al.updated_on
+	end
+end
